@@ -34,7 +34,7 @@ public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefre
                 case REFRESH_FINISH:
                     data.add(getData());
                     adapter.notifyDataSetChanged();//提示数据适配器数据发生改变从而更新适配器里的数据
-                    mSwipe.setRefreshing(false);
+                    mSwipe.setRefreshing(false);//隐藏刷新进度条
                     break;
             }
         }
@@ -58,6 +58,7 @@ public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefre
 
         mSwipe.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light,
                 android.R.color.holo_orange_light, android.R.color.holo_red_light);
+        //这里设置加载动画的颜色可选项，最多设置4种
     }
 
 
